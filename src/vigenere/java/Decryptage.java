@@ -25,7 +25,6 @@ public class Decryptage {
     private int[] ordre;
     private int longueurCle;
     private int[] cle;
-    private double ic;
 
     public Decryptage(String file) {
         int index = 0;
@@ -157,6 +156,6 @@ public class Decryptage {
     }
     
     public String toString(){
-        return "Indice de coincidence = " + this.ic;
+        return "Indice de coincidence = " + this.CalculCoincidence();
     }
 }
