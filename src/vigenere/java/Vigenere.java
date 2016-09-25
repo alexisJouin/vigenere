@@ -8,7 +8,9 @@ import java.util.Scanner;
  */
 public class Vigenere {
 
-    public static int MAX = 26;
+    public final static int MAX = 26;
+    public final static char alpha1[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    public static char alpha2[] = new char[26];
 
     public static void main(String[] args) {
         menu();
@@ -53,13 +55,8 @@ public class Vigenere {
             System.out.println("Veuillez saisir le fichier à décrypter :");
             String file = sc.nextLine();
             Decryptage decr = new Decryptage(file);
-
-            /*
-             float[] ic = decr.CalculCoincidence();
-             for (float i : ic) {
-             System.out.println(i);
-             }
-             */
+            System.out.println(decr.toString());
+            
             System.out.println("Fin du programme");
         }
 
